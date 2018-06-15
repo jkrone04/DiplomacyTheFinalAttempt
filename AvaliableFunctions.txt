@@ -1,0 +1,31 @@
+SERVERSIDE-CLASSES
+
+Board: Stores all territory and order data in a TERRDATA and ORDERDATA respectively.
+       In charge of updating all player's units once orders have been processed.
+       
+FileIO (static): Contains functions for reading diplomacy game files.
+Territory: Represents a territory in diplomacy, with all name, abreviation, type, and 
+           connection-sets. There are by default 4 connection-sets, one for each cardinal direction.
+           If there is only one coastal set needed, by default north(0) is used.
+       NOTE: There are actually 5 connection sets, four for fleets and one for armies only. This is
+       done to get around a problem with the fleets being able to jump peninsulas such as norway/sweeden
+       
+
+
+
+SERVERSIDE-STRUCTS
+
+FCON_DATA: Stores all data related to if two army connections actually connect
+           (return type for dtc_a function). Adjacents only, not convoys.
+ACON_DATA: Stores all data related to if two fleet connections actually connect.
+           (return type for dtc_f function). Adjacents only, no floating fleets.
+ConnectionSet: Contains a label and vector of territory pointers to indicate connections.
+
+SERVERSIDE-ENUMERATIONS
+UnitType - Indicates the type of unit
+Side- Indicates, NORTH,EAST,SOUTH,WEST, with numbers 0-3 respectively (inclusive)
+
+OTHER SERVERSIDE TYPE DEFINITIONS
+
+TERRDATA
+ORDERDATA
