@@ -1,0 +1,5 @@
+COMMANDS
+
+Adjacent territory connection checks:
+dtc_a: Determine if two territories connect for an army
+dtc_f: Determine if two territories connect for a fleet

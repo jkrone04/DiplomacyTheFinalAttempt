@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Comment CommentText="Board has Territories,&#xD;&#xA;just as Nation has Units">
+    <Position X="4.323" Y="0.76" Height="0.495" Width="3.268" />
+  </Comment>
+  <Comment CommentText="PHASE 1: Initialization&#xD;&#xA;Territories are added from the file.&#xD;&#xA;Nations are added from the file&#xD;&#xA;Units are created and given to nations&#xD;&#xA;Units start on a territory (point to it)&#xD;&#xA;">
+    <Position X="1.313" Y="3.177" Height="1.151" Width="2.419" />
+  </Comment>
+  <Comment CommentText="PHASE 2: Gameplay&#xD;&#xA;1) Nation may create an order&#xD;&#xA;	a) Order to move units&#xD;&#xA;	b) Nation may query as to what territories and connections                      are obtainable.&#xD;&#xA;2) Order is processed by Game mechanism.&#xD;&#xA;3) When accepted, board intervines and manually apply changes.&#xD;&#xA;4) Unit points to new territory&#xD;&#xA;">
+    <Position X="4.281" Y="3.188" Height="2.401" Width="4.127" />
+  </Comment>
+  <Class Name="Board" Collapsed="true">
+    <Position X="2.75" Y="1.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Board.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nation" Collapsed="true">
+    <Position X="7" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Nation.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Territory" Collapsed="true">
+    <Position X="2.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Territory.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Unit" Collapsed="true">
+    <Position X="7" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Unit.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="UnitType" Collapsed="true">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIQAAAAAAAAAAAA=</HashCode>
+      <FileName>Unit.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

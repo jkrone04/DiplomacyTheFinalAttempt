@@ -1,0 +1,1619 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Diplom.xml: A sample XML formatted file for diplomacy maps-->
+
+<!--DiplomacyMap: Outermost tag.
+   - version: tag for describing the version of the language used to describe the map
+   - map-version: tag for describing map's individual version
+   - author: The author of the map
+   - tags: tags associated with the map. (separated by commas)
+   - min-players: minimum players needed to play this map
+   - max-players: maximum supported players to play this map
+-->
+<DiplomacyMap version="1.0" map-version="1.0" author="Marcus H. Panozzo" tags="Europe1901,Diplomacy,Standard"
+              min-players="5" max-players="7">
+   <GameRules>
+      <Maxyears>
+         <!--How many years can go by until game ends (-1 indicates infinite time)-->
+         10
+      </Maxyears>
+      <ChainConvoy>
+         TRUE <!--Can you convoy across more than one ship-->
+      </ChainConvoy>
+      <StartDate>
+         <Season>BUILD</Season> <!--Seasons are BUILD, SPRING,FALL-->
+         <Year>1900</Year>
+      </StartDate>
+      <Bannedusers>
+         <!--Usernames who will not be allowed to join this game-->
+         jakers303
+      </Bannedusers>
+   </GameRules>
+   <!--TerritoryData: Tag containing sub tags of all the territories inside the map.-->
+   <TerritoryData>
+      <!---London: Sample territory Tag
+         - type: Type (OCEAN,COAST,INLAND)
+      -->
+      <London abrev="LON" type="COAST" value="1">
+         <Connections>
+            <army>
+              YOR,WAL
+            </army>
+            <defaultSet lbl="default">
+               ENG,NTH,YOR,WAL
+            </defaultSet>
+         </Connections>
+         <!--GraphicsData: Contains information about the graphics of a territory-->
+         <GraphicsData>
+            <Static>
+               <!-- Position of the unit when it is drawn assuming normal positions-->
+               <UnitPos></UnitPos>
+            </Static>
+            <Interaction>
+               <!-- Position of the interactivity dot (assumint normal positions)-->
+               <DotPos></DotPos>
+               
+            </Interaction>
+         </GraphicsData>
+      </London>
+      <Yorkshire abrev="YOR" type="COAST" value ="0">
+         <Connections>
+            <army>
+               LON,WAL,LVP,EDI
+            </army>
+            <defaultSet lbl="default">
+               EDI,LON,NTH      
+            </defaultSet>
+         </Connections>
+         <!--GraphicsData: Contains information about the graphics of a territory-->
+         <GraphicsData>
+            <Static>
+               <!-- Position of the unit when it is drawn assuming normal positions-->
+               <UnitPos></UnitPos>
+            </Static>
+            <Interaction>
+               <!-- Position of the interactivity dot (assumint normal positions)-->
+               <DotPos></DotPos>
+            </Interaction>
+         </GraphicsData>
+      </Yorkshire>
+      <Edinburgh abrev="EDI" type="COAST" value="1">
+         <Connections>
+            <army>
+               CLY,LVP,YOR
+            </army>
+            <defaultSet lbl="default">
+                 CLY,NRG,NTH,YOR
+            </defaultSet>
+         </Connections>
+         <!--GraphicsData: Contains information about the graphics of a territory-->
+         <GraphicsData>
+            <Static>
+               <!-- Position of the unit when it is drawn assuming normal positions-->
+               <UnitPos></UnitPos>
+            </Static>
+            <Interaction>
+               <!-- Position of the interactivity dot (assumint normal positions)-->
+               <DotPos></DotPos>
+
+            </Interaction>
+         </GraphicsData>
+      </Edinburgh>
+      <Clyde abrev="CLY" type="COAST" value="0">
+         <Connections>
+            <army>
+               LVP,EDI
+            </army>
+            <defaultSet lbl="default">
+               NAT,NRG,EDI,LVP
+            </defaultSet>
+         </Connections>
+         <!--GraphicsData: Contains information about the graphics of a territory-->
+         <GraphicsData>
+            <Static>
+               <!-- Position of the unit when it is drawn assuming normal positions-->
+               <UnitPos></UnitPos>
+            </Static>
+            <Interaction>
+               <!-- Position of the interactivity dot (assumint normal positions)-->
+               <DotPos></DotPos>
+
+            </Interaction>
+         </GraphicsData>
+      </Clyde>
+      <Liverpool abrev="LVP" type="COAST" value="1">         
+         <Connections>
+            <army>
+               WAL,YOR,EDI,CLY
+            </army>
+            <defaultSet lbl="default">
+              IRI,NAT,CLY,WAL
+            </defaultSet>
+         </Connections>
+         <!--GraphicsData: Contains information about the graphics of a territory-->
+         <GraphicsData>
+            <Static>
+               <!-- Position of the unit when it is drawn assuming normal positions-->
+               <UnitPos></UnitPos>
+            </Static>
+            <Interaction>
+               <!-- Position of the interactivity dot (assumint normal positions)-->
+               <DotPos></DotPos>
+
+            </Interaction>
+         </GraphicsData>
+      </Liverpool>
+      <Wales abrev="WAL" type="COAST" value="0">
+         <Connections>
+            <army>
+               LON,YOR,LVP
+            </army>
+            <defaultSet lbl="default">
+               IRI,ENG,LON,LVP
+            </defaultSet>
+         </Connections>
+         <!--GraphicsData: Contains information about the graphics of a territory-->
+         <GraphicsData>
+            <Static>
+               <!-- Position of the unit when it is drawn assuming normal positions-->
+               <UnitPos></UnitPos>
+            </Static>
+            <Interaction>
+               <!-- Position of the interactivity dot (assumint normal positions)-->
+               <DotPos></DotPos>
+
+            </Interaction>
+         </GraphicsData>
+      </Wales>
+      <Brest abrev="BRE" type="COAST" value="1">
+         <Connections>
+            <army>
+               GAS,PIC,PAR
+            </army>
+            <c_0 lbl="default">
+               ENG,PIC,GAS,MID
+            </c_0>
+         </Connections>
+         <!--GraphicsData: Contains information about the graphics of a territory-->
+         <GraphicsData>
+            <Static>
+               <!-- Position of the unit when it is drawn assuming normal positions-->
+               <UnitPos></UnitPos>
+            </Static>
+            <Interaction>
+               <!-- Position of the interactivity dot (assumint normal positions)-->
+               <DotPos></DotPos>
+
+            </Interaction>
+         </GraphicsData>
+      </Brest>
+      <Picardy abrev="PIC" type="COAST" value="0">
+         <Connections>
+            <army>
+               BRE,BEL,PAR,BUR
+            </army>
+            <c_0 lbl="default">
+               ENG,BRE,BEL
+            </c_0>
+         </Connections>
+         <!--GraphicsData: Contains information about the graphics of a territory-->
+         <GraphicsData>
+            <Static>
+               <!-- Position of the unit when it is drawn assuming normal positions-->
+               <UnitPos></UnitPos>
+            </Static>
+            <Interaction>
+               <!-- Position of the interactivity dot (assumint normal positions)-->
+               <DotPos></DotPos>
+
+            </Interaction>
+         </GraphicsData>
+      </Picardy>
+      <Paris abrev="PAR" type="INLAND" value="1">
+         <Connections>
+            <army>
+               BRE,PIC,BUR,GAS
+            </army>
+         </Connections>
+         <!--GraphicsData: Contains information about the graphics of a territory-->
+         <GraphicsData>
+            <Static>
+               <!-- Position of the unit when it is drawn assuming normal positions-->
+               <UnitPos></UnitPos>
+            </Static>
+            <Interaction>
+               <!-- Position of the interactivity dot (assumint normal positions)-->
+               <DotPos></DotPos>
+
+            </Interaction>
+         </GraphicsData>
+      </Paris>
+      <Burghendy abrev="BUR" type="INLAND" value="0">
+      <Connections>
+         <army>
+            PAR,PIC,BEL,RUH,MUN,MAR,GAS
+         </army>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Burghendy>
+      <Gascony abrev="GAS" type="COAST" value="0">
+         <Connections>
+            <army>
+               BRE,PAR,BUR,MAR,SPA
+            </army>
+            <c_0 lbl="default">
+               SPA,MID,BRE
+            </c_0>
+         </Connections>
+         <GraphicsData>
+            <Static>
+               <UnitPos></UnitPos>
+            </Static>
+            <Interaction>
+               <DotPos></DotPos>
+            </Interaction>
+         </GraphicsData>
+      </Gascony>
+      <Marseilles abrev="MAR" type="COAST" value="1">
+      <Connections>
+         <army>
+            BUR,GAS,SPA,PIE
+         </army>
+         <c_0 lbl="default">
+            SPA,GOL,PIE
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Marseilles>
+      <Piedmont abrev="PIE" type="COAST" value="0">
+      <Connections>
+         <army>
+            VEN,TUS,MAR,TYR
+         </army>
+         <c_0 lbl="default">
+            MAR,GOL,TUS
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Piedmont>
+      <Venice abrev="VEN" type="COAST" value="1">
+      <Connections>
+         <army>
+            PIE,TUS,ROM,APU,TYR,TRI
+         </army>
+         <c_0 lbl="default">
+            TRI,ADR,APU
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Venice>
+      <Tuscany abrev="TUS" type="COAST" value="0">
+      <Connections>
+         <army>
+            PIE,VEN,ROM
+         </army>
+         <c_0 lbl="default">
+            PIE,ROM,GOL,TYN
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Tuscany>
+      <Rome abrev="ROM" type="COAST" value="1">
+      <Connections>
+         <army>
+            TUS,VEN,APU,NAP
+         </army>
+         <c_0 lbl="default">
+            TUS,NAP,TYN
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Rome>
+      <Apulia abrev="APU" type="COAST" value="0">
+      <Connections>
+         <army>
+            VEN,ROM,NAP
+         </army>
+         <c_0 lbl="default">
+            NAP,VEN,ADR,ION
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Apulia>
+      <Naples abrev="NAP" type="COAST" value="1">
+      <Connections>
+         <army>
+            ROM,APU
+         </army>
+         <c_0 lbl="default">
+            ION,APU,ROM,TYN
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Naples>
+
+      <Tyrolia abrev="TYR" type="INLAND" value="0">
+      <Connections>
+         <army>
+            PIR,VEN,TRI,VIE,BOH,MUN
+         </army>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Tyrolia>
+      <Bohemia abrev="BOH" type="INLAND" value="0">
+      <Connections>
+         <army>
+            MUN,SIL,GAL,VIE,TYR
+         </army>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Bohemia>
+      <Galicia abrev="GAL" type="INLAND" value="0">
+      <Connections>
+         <army>
+            VIE,BOH,SIL,WAR,UKR,RUM,BUD
+         </army>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Galicia>
+      <Budapest abrev="BUD" type="INLAND" value="1">
+      <Connections>
+         <army>
+            TRI,VIE,GAL,RUM,SER
+         </army>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Budapest>
+      <Trieste abrev="TRI" type="COAST" value="1">
+      <Connections>
+         <army>
+            VEN,TYR,VIE,BUD,SER,ALB
+         </army>
+         <c_0 lbl="default">
+            VEN,ADR,ALB
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Trieste>
+      <Vienna abrev="VIE" type="INLAND" value="1">
+      <Connections>
+         <army>
+            TRI,TYR,BOH,GAL,BUD
+         </army>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Vienna>
+
+      <Constantinople abrev="CON" type="COAST" value="1">
+      <Connections>
+         <army>
+            BUL,ANK,SMY
+         </army>
+         <c_0 lbl="default">
+            BUL,BLA,ANK,SMY,AEG
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Constantinople>
+      <Ankara abrev="ANK" type="COAST" value="1">
+         <Connections>
+            <army>
+               CON,ARM,SMY
+            </army>
+            <c_0 lbl="default">
+               CON,BLA,ARM
+            </c_0>
+         </Connections>
+         <!--GraphicsData: Contains information about the graphics of a territory-->
+         <GraphicsData>
+            <Static>
+               <!-- Position of the unit when it is drawn assuming normal positions-->
+               <UnitPos></UnitPos>
+            </Static>
+            <Interaction>
+               <!-- Position of the interactivity dot (assumint normal positions)-->
+               <DotPos></DotPos>
+
+            </Interaction>
+         </GraphicsData>
+      </Ankara>
+      <Armenia abrev="ARM" type="COAST" value="0">
+      <Connections>
+         <army>
+            ANK,SMY,SYR,SEV
+         </army>
+         <c_0 lbl="default">
+            ANK,BLA,SEV
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Armenia>
+      <Syria abrev="SYR" type="COAST" value="0">
+      <Connections>
+         <army>
+            SMY,ARM
+         </army>
+         <c_0 lbl="default">
+            EAS,SMY
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Syria>
+      <Smyrna abrev="SMY" type="COAST" value="1">
+      <Connections>
+         <army>
+            CON,ANK,ARM,SYR
+         </army>
+         <c_0 lbl="default">
+            EAS,AEG,CON,SYR
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Smyrna>
+      
+      <!-- Here is StP, an example of a territory with two different -->
+      <Saint_Petersburg abrev="STP" type="COAST">
+         <Connections>
+            <army>
+               NWY,FIN,LVN,MOS
+            </army>
+            <c_0 lbl="North">
+               <!-- Set of connections on the north coast-->
+               NWY,BAR
+            </c_0>
+            <c_2 lbl="South">
+               <!-- Set of connections for the south coast-->
+              LVN,FIN,BOT
+            </c_2>
+         </Connections>
+         <GraphicsData>
+            <Static>
+               <!-- Position of the unit when it is drawn assuming normal positions-->
+               <UnitPos></UnitPos>
+            </Static>
+            <Interaction>
+               <!-- Position of the interactivity dot (assumint normal positions)-->
+               <DotPos></DotPos>
+
+            </Interaction>
+         </GraphicsData>
+      </Saint_Petersburg>
+      <Finland abrev="FIN" type="COAST" value="0">         
+         <Connections>
+            <army>
+               NWY,STP,SWE
+            </army>
+            <c_0 lbl="default">
+               BOT,SWE,STP
+            </c_0>
+         </Connections>
+         <!--GraphicsData: Contains information about the graphics of a territory-->
+         <GraphicsData>
+            <Static>
+               <!-- Position of the unit when it is drawn assuming normal positions-->
+               <UnitPos></UnitPos>
+            </Static>
+            <Interaction>
+               <!-- Position of the interactivity dot (assumint normal positions)-->
+               <DotPos></DotPos>
+
+            </Interaction>
+         </GraphicsData>
+      </Finland>
+      <Livonia abrev="LVN" type="COAST" value="0">
+      <Connections>
+         <army>
+            PRU,WAR,MOS,STP
+         </army>
+         <c_0 lbl="default">
+            PRU,BAL,BOT,STP
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Livonia>
+      <Moscow abrev="MOS" type="INLAND" value="1">
+         <Connections>
+            <army>
+               STP,LVN,WAR,UKR,SEV
+            </army>
+         </Connections>
+         <!--GraphicsData: Contains information about the graphics of a territory-->
+         <GraphicsData>
+            <Static>
+               <!-- Position of the unit when it is drawn assuming normal positions-->
+               <UnitPos></UnitPos>
+            </Static>
+            <Interaction>
+               <!-- Position of the interactivity dot (assumint normal positions)-->
+               <DotPos></DotPos>
+
+            </Interaction>
+         </GraphicsData>
+      </Moscow>
+      <Warsaw abrev="WAR" type="INLAND" value="1">
+      <Connections>
+         <army>
+            SIL,PRU,LVN,MOS,UKR,GAL
+         </army>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Warsaw>
+      <Ukraine abrev="UKR" type="INLAND" value="0">
+         <Connections>
+            <army>
+               WAR,MOS,SEV,RUM,GAL
+            </army>
+         </Connections>
+         <!--GraphicsData: Contains information about the graphics of a territory-->
+         <GraphicsData>
+            <Static>
+               <!-- Position of the unit when it is drawn assuming normal positions-->
+               <UnitPos></UnitPos>
+            </Static>
+            <Interaction>
+               <!-- Position of the interactivity dot (assumint normal positions)-->
+               <DotPos></DotPos>
+
+            </Interaction>
+         </GraphicsData>
+      </Ukraine>
+      <Sevastapol abrev="SEV" type="COAST" value="1">
+      <Connections>
+         <army>
+            MOS,UKR,ARM,RUM
+         </army>
+         <c_0 lbl="default">
+            ARM,BLA,RUM
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Sevastapol>
+      <Kiehl abrev="KIE" type="COAST" value="1">
+      <Connections>
+         <army>
+            HOL,DEN,BER,MUN,RUH
+         </army>
+         <c_0 lbl="default">
+            HOL,HEL,DEN,BER,BAL
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Kiehl>
+      <Berlin abrev="BER" type="COAST" value="1">
+      <Connections>
+         <army>
+            KIE,PRU,SIL,MUN
+         </army>
+         <c_0 lbl="default">
+            KIE,BAL,PRU
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Berlin>
+      <Prussia abrev="PRU" type="COAST" value="0">
+      <Connections>
+         <army>
+            BER,SIL,WAR,LVN
+         </army>
+         <c_0 lbl="default">
+            BER,BAL,LVN
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Prussia>
+      <Silesia abrev="SIL" type="INLAND" value="0">
+      <Connections>
+         <army>
+            MUN,BER,PRU,WAR,BOH
+         </army>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Silesia>
+      <Munich abrev="MUN" type="INLAND" value="1">
+      <Connections>
+         <army>
+            BUR,RUH,KIE,BER,SIL,BOH,TYR
+         </army>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Munich>
+      <Ruhr abrev="RUH" type="INLAND" value="0">
+      <Connections>
+         <army>
+            BUR,BEL,HOL,KIE,MUN
+         </army>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Ruhr>
+
+      <North_Atlantic abrev="NAT" type="OCEAN" value="0">
+      <Connections>
+         <c_0 lbl="default">
+            NRG,CLY,IRI,MID
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </North_Atlantic>
+      <Norwegian_Sea abrev="NRG" type="OCEAN" value="0">
+      <Connections>
+         <c_0 lbl="default">
+            NAT,NWY,BAR,NTH,CLY,EDI
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Norwegian_Sea>
+      <Barrents_Sea abrev="BAR" type="OCEAN" value="0">
+      <Connections>
+         <c_0 lbl="default">
+            NWY,STP,NRG
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Barrents_Sea>
+      <North_Sea abrev="NTH" type="OCEAN" value="0">
+      <Connections>
+         <c_0 lbl="default">
+            NRG,NWY,SKA,DEN,HEL,HOL,BEL,ENG,LON,YOR,EDI
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </North_Sea>
+      <Helgoland_Bight abrev="HEL" type="OCEAN" value="0">
+      <Connections>
+         <c_0 lbl="default">
+            HOL,BEL,NTH,DEN,KIE
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Helgoland_Bight>
+      <Skagerack abrev="SKA" type="OCEAN" value="0">
+      <Connections>
+         <c_0 lbl="default">
+            NWY,SWE,DEN,NTH
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Skagerack>
+      
+      <Baltic_Sea abrev="BAL" type="OCEAN" value="0">
+      <Connections>
+         <c_0 lbl="default">
+            PRU,BER,DEN,SWE,BOT,LVN
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Baltic_Sea>
+      <Irish_Sea abrev="IRI" type="OCEAN" value="0">
+      <Connections>
+         <c_0 lbl="default">
+            NAT,LVP,WAL,ENG,MID
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Irish_Sea>
+      <English_Channel abrev="ENG" type="OCEAN" value="0">
+      <Connections>
+         <c_0 lbl="default">
+            IRI,WAL,LON,BEL,PIC,BRE,MID,NTH
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </English_Channel>
+      <Mid_Atlantic abrev="MID" type="OCEAN" value="0">
+      <Connections>
+         <c_0 lbl="default">
+            NAT,IRI,ENG,BRE,GAS,SPA,POR
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Mid_Atlantic>
+      <Gulf_Of_Lyon abrev="GOL" type="OCEAN" value="0">
+      <Connections>
+         <c_0 lbl="default">
+            SPA,MAR,PIE,TUS,WES,TYN
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Gulf_Of_Lyon>
+      <West_Mediteranian abrev="WES" type="OCEAN" value="0">
+      <Connections>
+         <c_0 lbl="default">
+            NAF,SPA,GOL,TYN,TUN
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </West_Mediteranian>
+      <Tyrhenian_Sea abrev="TYN" type="OCEAN" value="0">
+      <Connections>
+         <c_0 lbl="default">
+            TUS,ROM,NAP,ION,TUN,WES,GOL
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Tyrhenian_Sea>
+      <Adriatic_Sea abrev="ADR" type="OCEAN" value="0">
+         <Connections>
+            <c_0 lbl="default">
+               APU,ION,ALB,TRI,VEN
+            </c_0>
+         </Connections>
+         <!--GraphicsData: Contains information about the graphics of a territory-->
+         <GraphicsData>
+            <Static>
+               <!-- Position of the unit when it is drawn assuming normal positions-->
+               <UnitPos></UnitPos>
+            </Static>
+            <Interaction>
+               <!-- Position of the interactivity dot (assumint normal positions)-->
+               <DotPos></DotPos>
+
+            </Interaction>
+         </GraphicsData>
+      </Adriatic_Sea>
+      <Ionian_Sea abrev="ION" type="OCEAN" value="0">
+      <Connections>
+         <c_0 lbl="default">
+            TUN,TYN,NAP,APU,ADR,ALB,GRE,AEG,EAS
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Ionian_Sea>
+      <Gulf_Of_Bothnia abrev="BOT" type="OCEAN" value="0">
+         <Connections>
+            <c_0 lbl="default">
+               SWE,FIN,STP,LVN,BAL
+            </c_0>
+         </Connections>
+         <GraphicsData>
+            <Static>
+               <!-- Position of the unit when it is drawn assuming normal positions-->
+               <UnitPos></UnitPos>
+            </Static>
+            <Interaction>
+               <!-- Position of the interactivity dot (assumint normal positions)-->
+               <DotPos></DotPos>
+
+            </Interaction>
+         </GraphicsData>
+      </Gulf_Of_Bothnia>
+      <Aegean_Sea abrev="AEG" type="OCEAN" value="0">
+      <Connections>
+         <c_0 lbl="default">
+            GRE,ION,EAS,SMY,CON,BUL
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Aegean_Sea>
+      <East_Mediteranian abrev="EAS" type="OCEAN" value="0">
+      <Connections>
+         <c_0 lbl="default">
+            ION,AEG,SMY,SYR
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </East_Mediteranian>
+      <Black_Sea abrev="BLA" type="OCEAN" value="0">
+      <Connections>
+         <c_0 lbl="default">
+            CON,ANK,ARM,SEV,RUM,BUL
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Black_Sea>
+
+      <Norway abrev="NWY" type="COAST" value="1">
+      <Connections>
+         <army>
+            SWE,FIN,STP
+         </army>
+         <c_0 lbl="default">
+            NRG,NTH,SKA,SWE,STP
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Norway>
+      <Sweden abrev="SWE" type="COAST" value="1">
+      <Connections>
+         <army>
+            DEN,NWY,FIN
+         </army>
+         <c_0 lbl="default">
+            NWY,DEN,FIN,BOT,BAL,SKA
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Sweden>
+      <Denmark abrev="DEN" type="COAST" value="1">
+      <Connections>
+         <army>
+            KIE,SWE
+         </army>
+         <c_0 lbl="default">
+            HEL,NTH,SKA,SWE,BAL,KIE
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Denmark>
+      <Holland abrev="HOL" type="COAST" value="1">
+      <Connections>
+         <army>
+            BEL,RUH,KIE
+         </army>
+         <c_0 lbl="default">
+            BEL,NTH,HEL,KIE
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Holland>
+      <Belgium abrev="BEL" type="COAST" value="1">
+      <Connections>
+         <army>
+            PIC,BUR,RUH,HOL
+         </army>
+         <c_0 lbl="default">
+            PIC,ENG,NTH,HOL
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Belgium>
+      <Portugal abrev="POR" type="COAST" value="1">
+      <Connections>
+         <army>
+            SPA
+         </army>
+         <c_0 lbl="default">
+            MID,SPA
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Portugal>
+      <Spain abrev="SPA" type="COAST" value="1">
+      <Connections>
+         <army>
+            POR,GAS,MAR
+         </army>
+         <c_0 lbl="North">
+            POR,MID,GAS
+         </c_0>
+         <c_2 lbl="South">
+            MID,WES,GOL,POR,MAR
+         </c_2>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Spain>
+      <North_Africa abrev="NAF" type="COAST" value="0">
+      <Connections>
+         <army>
+            TUN
+         </army>
+         <c_0 lbl="default">
+            MID,WES,TUN
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </North_Africa>
+      <Tunisia abrev="TUN" type="COAST" value="1">
+      <Connections>
+         <army>
+            NAF
+         </army>
+         <c_0 lbl="default">
+            NAF,WES,TYN,ION
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Tunisia>
+      <Greece abrev="GRE" type="COAST" value="1">
+      <Connections>
+         <army>
+            ALB,SER,BUL
+         </army>
+         <c_0 lbl="default">
+            ION,AEG,BUL,ALB
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Greece>
+      <Bulgaria abrev="BUL" type="COAST" value="1">
+      <Connections>
+         <army>
+            GRE,SER,RUM,CON
+         </army>
+         <c_1 lbl="East">
+            BLA,CON,RUM
+         </c_1>
+         <c_2 lbl="South">
+            GRE,AEG,CON
+         </c_2>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Bulgaria>
+      <Albania abrev="ALB" type="COAST" value="0">
+      <Connections>
+         <army>
+            TRI,SER,GRE
+         </army>
+         <c_0 lbl="default">
+            GRE,ION,ADR,TRI
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Albania>
+      <Serbia abrev="SER" type="INLAND" value="1">
+      <Connections>
+         <army>
+            ALB,TRI,BUD,RUM,BUL,GRE
+         </army>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Serbia>
+      <Rumania abrev="RUM" type="COAST" value="1">
+      <Connections>
+         <army>
+            GAL,UKR,SEV,BUD,SER,BUL
+         </army>
+         <c_0 lbl="default">
+            SEV,BUL,BLA
+         </c_0>
+      </Connections>
+      <!--GraphicsData: Contains information about the graphics of a territory-->
+      <GraphicsData>
+         <Static>
+            <!-- Position of the unit when it is drawn assuming normal positions-->
+            <UnitPos></UnitPos>
+         </Static>
+         <Interaction>
+            <!-- Position of the interactivity dot (assumint normal positions)-->
+            <DotPos></DotPos>
+
+         </Interaction>
+      </GraphicsData>
+      </Rumania>
+   </TerritoryData>
+   
+</DiplomacyMap>
+
+<!-- Processing Technique
+
+1) Do a readthrough of all territory data to create the territories
+   (these are owned by the board)
+2) Do a re-read to set up connections between the territories (access the Connections tag of each territory)
+3) Do a read of the Nations data and generate nations
+4) Do a re-read to set up the units and point to initial starting positions
+5) Do a re-read to set up the "mine" territories of each Nation
+
+-->
+
+
+<!-- An oppen letter to coast resolution
+Coasts are resolved by the end of the connection.
+ex. If Marseilles connects to Spain (SPA)
+   We do a query on SPA and see through which coast it connects to MAR
+   This determines the correct writing formula to connect MAR to SPA (SC)
+-->
