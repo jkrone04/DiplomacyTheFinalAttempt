@@ -1,2 +1,2 @@
 # DiplomacyTheFinalAttempt
-Im not doing this again so....
+Remake of diplomacy board game
